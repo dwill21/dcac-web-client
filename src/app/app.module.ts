@@ -8,12 +8,21 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { FooterComponent } from './footer/footer.component';
 import { MatIconModule } from '@angular/material/icon';
+import { HomeComponent } from './home/home.component';
+import {MatCardModule} from "@angular/material/card";
+import { AboutComponent } from './about/about.component';
+import { TestimonialsCarouselComponent } from './testimonials-carousel/testimonials-carousel.component';
+import { ServicesComponent } from './services/services.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
+    AboutComponent,
+    TestimonialsCarouselComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +30,8 @@ import { MatIconModule } from '@angular/material/icon';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

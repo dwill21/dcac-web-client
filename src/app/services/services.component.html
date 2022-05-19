@@ -1,0 +1,72 @@
+<div class="services-container">
+  <h1>Services</h1>
+  <div class="services-description">
+    DeWillis College Admissions Consulting offers several packages to meet the needs of client families
+  </div>
+
+  <mat-card>
+    <mat-card-title>Comprehensive Package</mat-card-title>
+    <mat-card-subtitle>
+      Our best value to families. Allows us to make the most impact on planning and admissions success!
+    </mat-card-subtitle>
+
+    <mat-card-content>
+      Through a series of consultations we assess the student’s high school curriculum and extracurricular activities,
+      determine the qualities important to that student in selecting a college, and define the attributes a school must
+      possess in order for him/her to be successful. We match our findings with our extensive knowledge of colleges to
+      create a “best-fit” list of schools. We also develop an ACT/SAT preparation and testing timeline, discuss summer
+      enrichment, and prepare students for college visits. Our work continues with essay topic development and editing,
+      financial aid and scholarship guidance, interview preparation as needed, and college application assistance.
+      Finally, we evaluate the student’s college acceptance offers to help determine the best award.
+    </mat-card-content>
+    <mat-card-content>
+      <b>We keep students on track and working toward deadlines!</b>
+    </mat-card-content>
+    <mat-card-content>
+      This package is offered to students 11th-12th grades, customized according to the grade in which you begin.
+      <b>Our best advice is “Start Early!"</b>
+      Starting early alleviates some of the stress inherent in the college search, and most importantly, it gives you
+      choices.
+    </mat-card-content>
+
+    <mat-card-content>
+      <ul>
+        <li *ngFor="let service of comprehensiveServices">{{service}}</li>
+      </ul>
+    </mat-card-content>
+
+    <mat-card-content>
+      <i>
+        Freshman and sophomore students: Add 1-2 consultations/yr, as contracted, to the comprehensive package.
+        Discussions include academic courses, extracurricular activities and summer enrichment.
+      </i>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-title>Mini-packages</mat-card-title>
+    <mat-card-subtitle>Offered on a limited basis to families who need assistance in selected areas:</mat-card-subtitle>
+
+    <mat-card-content>
+      <ul>
+        <li *ngFor="let service of miniPackages">{{service}}</li>
+      </ul>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-title>Transfer package</mat-card-title>
+    <mat-card-content>
+      For students making the transition from community college or who wish to attend another university for any number
+      of reasons.
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-title>Hourly Services</mat-card-title>
+    <mat-card-content>
+      Don’t see exactly what you are looking for? We offer customized services as contracted, beginning with 3-hour
+      time blocks.
+    </mat-card-content>
+  </mat-card>
+</div>

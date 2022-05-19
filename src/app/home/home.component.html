@@ -1,0 +1,25 @@
+<div>
+  <mat-toolbar-row class="byline">
+    Partnering with families to find the best-fit college at the right price
+  </mat-toolbar-row>
+  <div class="campus">
+    <mat-card class="overlay">
+      <mat-card-content>{{ pitch }}</mat-card-content>
+      <mat-card-actions class="actions">
+        <a mat-button [routerLink]="'/services'">Learn more about what we offer</a>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  <div class="section-container">
+    <div class="personal-info">
+      <img src="http://www.dewilliscollegeadmissions.com/images/sharon.jpg" alt="Sharon DeWillis"/>
+      <h3>Sharon DeWillis</h3>
+      <div>
+        Independent Educational Consultants of America
+        <br>
+        Professional Member
+      </div>
+    </div>
+    <app-testimonials-carousel class="carousel"></app-testimonials-carousel>
+  </div>
+</div>

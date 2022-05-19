@@ -1,0 +1,35 @@
+.testimonial-container {
+  height: 350px;
+  width: 500px;
+}
+
+.testimonial-content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.card-body {
+  display: flex;
+  margin: auto;
+
+  .mat-icon {
+    margin: auto;
+    cursor: pointer;
+  }
+}
+
+.identifier {
+  text-align: right;
+  margin-right: 5px;
+}
+
+.carousel-dots {
+  text-align: center;
+
+  .mat-icon {
+    font-size: 8px;
+    width: 10px;
+    color: lightgray;
+  }
+}

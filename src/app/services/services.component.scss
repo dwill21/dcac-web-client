@@ -1,0 +1,30 @@
+.services-container {
+  width: 80%;
+  margin: auto;
+  padding: 50px 0;
+
+  h1 {
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  .mat-card {
+    margin-bottom: 40px;
+  }
+
+  .mat-card-title {
+    margin-bottom: 14px;
+  }
+
+  .mat-card-subtitle {
+    margin-bottom: 10px;
+  }
+}
+
+.services-description {
+  text-align: center;
+  font-size: 16px;
+  padding-bottom: 50px;
+}

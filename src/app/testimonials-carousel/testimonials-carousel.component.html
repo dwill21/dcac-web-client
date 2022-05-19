@@ -1,0 +1,25 @@
+<div>
+  <mat-card *ngIf="testimonials[currentIndex] as story">
+    <div class="card-body">
+      <mat-icon aria-hidden="false" aria-label="Previous testimonial" (click)="prevStory()">arrow_back_ios</mat-icon>
+
+      <div class="testimonial-container">
+        <div class="testimonial-content">
+          <mat-card-content *ngIf="story.address">{{story.address}},</mat-card-content>
+          <mat-card-content>{{story.body}}</mat-card-content>
+          <mat-card-content class="identifier">{{story.identifier}}</mat-card-content>
+        </div>
+      </div>
+
+      <mat-icon aria-hidden="false" aria-label="Next testimonial" (click)="nextStory()">arrow_forward_ios</mat-icon>
+    </div>
+
+    <mat-card-footer class="carousel-dots">
+      <mat-icon
+        *ngFor="let _ of testimonials; let i = index"
+        [attr.data-index]="i"
+        [style]="currentIndex == i ? { color: 'black' } : {}"
+      >circle</mat-icon>
+    </mat-card-footer>
+  </mat-card>
+</div>

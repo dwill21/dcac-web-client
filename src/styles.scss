@@ -1,6 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+$brand-color: #af0029;
 
-html, body { height: 100%; }
+html, body { height: 100%; font-size: 16px; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .menu-spacer { flex: 1 1 auto; }
+.mat-toolbar {
+  background: $brand-color;
+  color: white;
+}
