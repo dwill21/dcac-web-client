@@ -1,5 +1,5 @@
 {
-  "name": "dcac-app-shell",
+  "name": "dcac-web-client",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
