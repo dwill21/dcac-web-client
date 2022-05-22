@@ -1,4 +1,4 @@
-<div class="carousel">
+<div class="carousel" (click)="resetAutoplayTimer()">
   <ng-container *ngFor="let slideContent of text; let i = index">
     <mat-card
       *ngIf="i === currentSlide"
@@ -21,6 +21,16 @@
         <span class="arrow right"></span>
       </button>
     </mat-card>
+
+    <div class="carousel-dots">
+      <mat-icon
+        *ngFor="let _ of text; let i = index"
+        [class]="i !== currentSlide ? 'deselected' : ''"
+        (click)="currentSlide = i"
+      >
+        circle
+      </mat-icon>
+    </div>
   </ng-container>
 </div>
 

@@ -75,3 +75,22 @@
 .content {
   margin: auto;
 }
+
+.carousel-dots {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  .mat-icon {
+    font-size: 8px;
+    height: 8px;
+    width: 12px;
+    color: black;
+    cursor: pointer;
+
+    &.deselected {
+      color: gray;
+    }
+  }
+}

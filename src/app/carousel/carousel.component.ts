@@ -1,5 +1,7 @@
-import { Component, Input, OnInit, TemplateRef } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit, TemplateRef } from '@angular/core';
 import { animate, style, transition, trigger } from '@angular/animations';
+import { interval, Subject } from 'rxjs';
+import { startWith, switchMap, takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'app-carousel',
@@ -17,16 +19,31 @@ import { animate, style, transition, trigger } from '@angular/animations';
     ])
   ]
 })
-export class CarouselComponent implements OnInit {
+export class CarouselComponent implements OnInit, OnDestroy {
 
   @Input() text: any = [];
   @Input() contentTemplate?: TemplateRef<any>;
 
   currentSlide = 0;
+  autoplay$ = new Subject<void>();
+  private isDestroyed$ = new Subject<boolean>();
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    const newTimer = () => interval(30 * 1000);
+    this.autoplay$.pipe(
+      startWith(newTimer()),
+      switchMap(newTimer),
+      takeUntil(this.isDestroyed$)
+    ).subscribe(() => {
+      this.onNextClick();
+    });
+  }
+
+  ngOnDestroy() {
+    this.isDestroyed$.next(true);
+  }
 
   onPreviousClick() {
     const previous = this.currentSlide - 1;
@@ -36,5 +53,9 @@ export class CarouselComponent implements OnInit {
   onNextClick() {
     const next = this.currentSlide + 1;
     this.currentSlide = next === this.text.length ? 0 : next;
+  }
+
+  resetAutoplayTimer() {
+    this.autoplay$.next();
   }
 }
