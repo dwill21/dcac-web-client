@@ -9,10 +9,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { FooterComponent } from './footer/footer.component';
 import { MatIconModule } from '@angular/material/icon';
 import { HomeComponent } from './home/home.component';
-import {MatCardModule} from "@angular/material/card";
+import { MatCardModule } from '@angular/material/card';
 import { AboutComponent } from './about/about.component';
 import { TestimonialsCarouselComponent } from './testimonials-carousel/testimonials-carousel.component';
 import { ServicesComponent } from './services/services.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ServicesComponent } from './services/services.component';
     HomeComponent,
     AboutComponent,
     TestimonialsCarouselComponent,
-    ServicesComponent
+    ServicesComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,

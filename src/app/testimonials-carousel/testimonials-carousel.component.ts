@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestimonialsCarouselComponent implements OnInit {
 
-  currentIndex = 0;
   testimonials: {address?: string, body: string, identifier: string}[] = [
     {
       address: 'Sharon',
@@ -70,20 +69,7 @@ export class TestimonialsCarouselComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
-  nextStory() {
-    this.currentIndex = (this.currentIndex + 1) % this.testimonials.length;
-  }
-
-  prevStory() {
-    if (this.currentIndex > 0) {
-      this.currentIndex -= 1;
-    } else {
-      this.currentIndex = this.testimonials.length - 1;
-    }
-  }
+  ngOnInit(): void {}
 }
