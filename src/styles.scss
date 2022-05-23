@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-$brand-color: #af0029;
+$brand-color: #5E9D91;
+$brand-color-lighter: #ACCBB5;
 
 html, body { height: 100%; font-size: 16px; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
@@ -7,4 +8,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mat-toolbar {
   background: $brand-color;
   color: white;
+}
+.mat-card {
+  background-color: #F0EFCC;
 }

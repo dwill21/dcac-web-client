@@ -45,22 +45,28 @@
   display: flex;
   position: relative;
   width: 100%;
-  background: rgba(0,0,0,0.1);
+  background: $brand-color-lighter;
 }
 
 .personal-info {
   margin: auto;
   text-align: center;
+  font-size: 1rem;
 
-  img {
+  .headshot {
     width: 142px;
     height: 177px;
+    border: 1px solid black;
+  }
+
+  .membership {
+    width: 230px;
   }
 
   h3 {
     margin-top: 16px;
-    margin-bottom: 8px;
     font-weight: bold;
+    font-size: 1.4rem;
   }
 }
 

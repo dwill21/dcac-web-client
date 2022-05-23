@@ -22,11 +22,6 @@ export class ServicesComponent implements OnInit {
     'College application assistance',
     'Comparison of college acceptances',
   ];
-  miniPackages = [
-    'Best-fit college list',
-    'Essay topic development and editing',
-    'Application assistance',
-  ];
 
   constructor() { }
 
