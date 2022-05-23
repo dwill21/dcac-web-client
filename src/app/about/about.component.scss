@@ -1,23 +1,28 @@
 .about-container {
   padding: 50px 0;
-}
-
-.mat-card {
   width: 80%;
   margin: auto;
 
-  .mat-card-title {
+  h1 {
+    font-size: 28px;
     text-align: center;
-  }
-
-  p {
-    font-size: 1rem;
+    margin: 50px 0;
   }
 
   img {
     display: flex;
     height: 250px;
     margin: auto;
-    padding: 40px 0;
+    padding-bottom: 50px;
+  }
+}
+
+.mat-card {
+  .mat-card-title {
+    text-align: center;
+  }
+
+  p {
+    font-size: 1rem;
   }
 }
