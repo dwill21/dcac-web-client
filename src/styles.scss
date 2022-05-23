@@ -8,6 +8,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .menu-spacer { flex: 1 1 auto; }
 .mat-toolbar {
   background: $brand-color;
+  .mat-button {
+    font-size: 1rem;
+  }
 }
 .mat-card {
   background-color: $accent-color;
