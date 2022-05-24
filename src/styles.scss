@@ -1,10 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
-$brand-color: #af0029;
+$brand-color: #9AC1B9;
+$brand-color-lighter: #CAE0DB;
+$accent-color: #F6F5DF;
 
 html, body { height: 100%; font-size: 16px; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .menu-spacer { flex: 1 1 auto; }
 .mat-toolbar {
   background: $brand-color;
-  color: white;
+  .mat-button {
+    font-size: 1rem;
+  }
+}
+.mat-card {
+  background-color: $accent-color;
+}
+
+:root {
+  background-color: $brand-color-lighter;
 }
