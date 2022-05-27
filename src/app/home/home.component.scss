@@ -10,18 +10,33 @@
 }
 
 .campus {
-  height: 70vh;
   width: 100vw;
   background: url("/assets/college-entrance.jpg") no-repeat fixed center;
   background-size: cover;
+
+  &.campus-full {
+    height: 70vh;
+  }
+
+  &.campus-mobile {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .overlay {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 70%;
+
+  &.overlay-full {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &.overlay-mobile {
+    margin: 10px 0;
+  }
 }
 
 .mat-card-content {
@@ -49,7 +64,7 @@
   position: relative;
   width: 100%;
 
-  &.columns {
+  &.section-container-mobile {
     flex-direction: column-reverse;
   }
 }
@@ -65,7 +80,7 @@
     font-size: 1.4rem;
   }
 
-  &.spacing {
+  &.personal-info-mobile {
     padding-bottom: 50px;
   }
 }

@@ -2,16 +2,16 @@
   <mat-toolbar-row class="byline">
     Partnering with families to find the best-fit college at the right price
   </mat-toolbar-row>
-  <div class="campus">
-    <mat-card class="overlay">
+  <div class="campus" [class]="(breakpointService.isScreenXS$ | async) ? 'campus-mobile' : 'campus-full'">
+    <mat-card class="overlay" [class]="(breakpointService.isScreenXS$ | async) ? 'overlay-mobile' : 'overlay-full'">
       <mat-card-content>{{ pitch }}</mat-card-content>
       <mat-card-actions class="actions">
         <a mat-button [routerLink]="'/services'">Learn more about what we offer</a>
       </mat-card-actions>
     </mat-card>
   </div>
-  <div class="section-container" [class]="(breakpointService.isScreenXS$ | async) ? 'columns' : ''">
-    <div class="personal-info" [class]="(breakpointService.isScreenXS$ | async) ? 'spacing' : ''">
+  <div class="section-container" [class]="(breakpointService.isScreenXS$ | async) ? 'section-container-mobile' : ''">
+    <div class="personal-info" [class]="(breakpointService.isScreenXS$ | async) ? 'personal-info-mobile' : ''">
       <img src="/assets/sharon.jpg" alt="Headshot of Sharon DeWillis" class="headshot"/>
       <h3>Sharon DeWillis</h3>
       <img
