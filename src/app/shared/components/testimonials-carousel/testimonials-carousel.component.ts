@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BreakpointService } from '../../services/breakpoint.service';
 
 @Component({
   selector: 'app-testimonials-carousel',
@@ -69,7 +70,7 @@ export class TestimonialsCarouselComponent implements OnInit {
     }
   ];
 
-  constructor() {}
+  constructor(public breakpointService: BreakpointService) {}
 
   ngOnInit(): void {}
 }

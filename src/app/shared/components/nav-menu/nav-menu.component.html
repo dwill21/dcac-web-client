@@ -1,0 +1,17 @@
+<ng-container *ngIf="!condense; else condensedMenu">
+  <a *ngFor="let link of navLinks" mat-button [routerLink]="link.location">
+    {{ link.text }}
+  </a>
+</ng-container>
+
+<ng-template #condensedMenu>
+  <button mat-button [matMenuTriggerFor]="menu">
+    <mat-icon aria-hidden="false" aria-label="Open navigation menu">menu</mat-icon>
+  </button>
+
+  <mat-menu #menu="matMenu">
+    <a *ngFor="let link of navLinks" mat-menu-item [routerLink]="link.location">
+      {{ link.text }}
+    </a>
+  </mat-menu>
+</ng-template>
