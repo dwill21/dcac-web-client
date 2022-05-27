@@ -9,9 +9,15 @@ import { map } from 'rxjs/operators';
 export class BreakpointService {
 
   readonly isScreenXS$: Observable<boolean>;
+  readonly isScreenTabletPortrait$: Observable<boolean>
 
   constructor(private breakpointObserver: BreakpointObserver) {
-    this.isScreenXS$ = this.breakpointObserver.observe(Breakpoints.XSmall)
+    this.isScreenXS$ = this.observeBreakpoint(Breakpoints.XSmall);
+    this.isScreenTabletPortrait$ = this.observeBreakpoint(Breakpoints.TabletPortrait);
+  }
+
+  private observeBreakpoint(breakpoint: string): Observable<boolean> {
+    return this.breakpointObserver.observe(breakpoint)
       .pipe(map(result => result.matches));
   }
 }
