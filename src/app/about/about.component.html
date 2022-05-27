@@ -1,4 +1,4 @@
-<div class="about-container">
+<div class="about-container" [class]="!(breakpointService.isScreenXS$ | async) ? 'constrained-width' : ''">
   <h1>About Sharon DeWillis</h1>
   <img src="http://www.dewilliscollegeadmissions.com/images/dewillis-family.jpg" alt="The DeWillis family"/>
 

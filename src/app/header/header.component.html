@@ -1,14 +1,10 @@
 <mat-toolbar>
   <mat-toolbar-row class="mat-elevation-z6">
     <a mat-button [routerLink]="'/'">
-      <h1>DeWillis College Admissions Consulting</h1>
+      <h1>{{ title$ | async }}</h1>
     </a>
     <span class="menu-spacer"></span>
 
-    <div>
-      <a mat-button [routerLink]="'/'">Home</a>
-      <a mat-button [routerLink]="'/services'">Services</a>
-      <a mat-button [routerLink]="'/about'">About</a>
-    </div>
+    <app-nav-menu [navLinks]="navLinks" [condense]="(breakpointService.isScreenXS$ | async) || false"></app-nav-menu>
   </mat-toolbar-row>
 </mat-toolbar>

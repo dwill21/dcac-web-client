@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BreakpointService } from '../shared/services/breakpoint.service';
 
 @Component({
   selector: 'app-home',
@@ -16,9 +17,7 @@ export class HomeComponent implements OnInit {
     'mistakes and missed deadlines. And just as importantly, we partner with families to minimize the stress and ' +
     'uncertainty in the process so they can focus on the joyful parts of high school.';
 
-  constructor() { }
+  constructor(public breakpointService: BreakpointService) {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

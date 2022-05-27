@@ -14,6 +14,9 @@ import { AboutComponent } from './about/about.component';
 import { TestimonialsCarouselComponent } from './testimonials-carousel/testimonials-carousel.component';
 import { ServicesComponent } from './services/services.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatMenuModule } from '@angular/material/menu';
+import { NavMenuComponent } from './shared/components/nav-menu/nav-menu.component';
 
 @NgModule({
   declarations: [
@@ -24,17 +27,20 @@ import { CarouselComponent } from './carousel/carousel.component';
     AboutComponent,
     TestimonialsCarouselComponent,
     ServicesComponent,
-    CarouselComponent
+    CarouselComponent,
+    NavMenuComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatIconModule,
-    MatCardModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatToolbarModule,
+        MatButtonModule,
+        MatIconModule,
+        MatCardModule,
+        LayoutModule,
+        MatMenuModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
