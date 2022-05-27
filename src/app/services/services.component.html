@@ -1,4 +1,4 @@
-<div class="services-container">
+<div class="services-container" [class]="!(breakpointService.isScreenXS$ | async) ? 'constrained-width' : ''">
   <h1>Services</h1>
   <div class="services-description">
     DeWillis College Admissions Consulting offers several packages to meet the needs of client families

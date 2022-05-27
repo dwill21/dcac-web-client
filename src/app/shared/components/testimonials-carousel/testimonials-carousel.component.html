@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" [style]="(breakpointService.isScreenXS$ | async) ? { height: '510px' } : { padding: '2em' }">
   <app-carousel [text]="testimonials" [contentTemplate]="contentTemplate"></app-carousel>
 </div>
 

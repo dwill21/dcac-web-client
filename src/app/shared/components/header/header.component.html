@@ -1,0 +1,10 @@
+<mat-toolbar>
+  <mat-toolbar-row class="mat-elevation-z6">
+    <a mat-button [routerLink]="'/'">
+      <h1>{{ title$ | async }}</h1>
+    </a>
+    <span class="menu-spacer"></span>
+
+    <app-nav-menu [navLinks]="navLinks" [condense]="(breakpointService.isScreenXS$ | async) || false"></app-nav-menu>
+  </mat-toolbar-row>
+</mat-toolbar>

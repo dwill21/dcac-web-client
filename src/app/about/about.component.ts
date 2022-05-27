@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BreakpointService } from '../shared/services/breakpoint.service';
 
 @Component({
   selector: 'app-about',
@@ -24,7 +25,7 @@ export class AboutComponent implements OnInit {
     'this she takes great pride.'
   ];
 
-  constructor() { }
+  constructor(public breakpointService: BreakpointService) {}
 
   ngOnInit(): void {
   }
