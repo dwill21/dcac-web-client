@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BreakpointService } from '../shared/services/breakpoint.service';
+import { BreakpointService } from '../../services/breakpoint.service';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
