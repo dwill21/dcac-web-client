@@ -11,6 +11,10 @@
   img {
     display: flex;
     height: 250px;
+    width: 425px;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: top;
     margin: auto;
     padding-bottom: 50px;
   }
